@@ -49,6 +49,7 @@ window.onload = function(){
           eixoYB = (((col.length-1)/2- this.cellIndex) * 4)*-1;
         }
         document.querySelector("#ig").style.transform = "perspective(500px) rotateY("+eixoYB+"deg) rotateX("+eixoXB+"deg)"; 
+        document.querySelector("#borda").style.transform = "perspective(500px) rotateY("+eixoYB/2+"deg) rotateX("+eixoXB/2+"deg)"; 
     });
     }
     for (let i=0;i<col.length;i++){
@@ -62,6 +63,7 @@ window.onload = function(){
           eixoXB = (((col.length-1)/2 - this.sectionRowIndex) * 4)*1;
         }
         document.querySelector("#ig").style.transform = "perspective(500px) rotateY(".concat(eixoYB).concat("deg) rotateX(").concat(eixoXB).concat("deg)");
+        document.querySelector("#borda").style.transform = "perspective(500px) rotateY("+eixoYB/2+"deg) rotateX("+eixoXB/2+"deg)"; 
     });
     }
     for (let i=0;i<cell.length;i++){
@@ -69,6 +71,7 @@ window.onload = function(){
         eixoXB = 0;
         eixoYB = 0;
         document.querySelector("#ig").style.transform = "perspective(500px) rotateY("+eixoYB+"deg) rotateX("+eixoXB+"deg)"; 
+        document.querySelector("#borda").style.transform = "perspective(500px) rotateY("+eixoYB+"deg) rotateX("+eixoXB+"deg)"; 
     });
   }
         document.querySelector('#tab').addEventListener("mouseover", function() {
