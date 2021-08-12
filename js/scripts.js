@@ -75,9 +75,9 @@ window.onload = function(){
     });
   }
         document.querySelector('#tab').addEventListener("mouseover", function() {
-        document.querySelector("#blur").style.cssText = "filter:blur(300px); border-radius :73% 27% 47% 53% / 67% 12% 88% 33% ";
+        document.querySelector("#blur").style.cssText = "filter:blur(25px); border-radius :73% 27% 47% 53% / 67% 12% 88% 33% ";
       });
         document.querySelector('#tab').addEventListener("mouseout", function() {
-          document.querySelector("#blur").style.cssText = "filter:blur(10px); border-radius :73% 27% 47% 53% / 67% 12% 88% 33% ";
+          document.querySelector("#blur").style.cssText = "filter:blur(5px); border-radius :73% 27% 47% 53% / 67% 12% 88% 33% ";
   });
 }

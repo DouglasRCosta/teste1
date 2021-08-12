@@ -43,9 +43,9 @@ body{
     background: linear-gradient(150deg, rgb(180, 245, 0) 8%, rgb(215, 0, 226) 68%, rgb(2, 128, 119)0%); 
     transition: 800ms;
     border-radius: 73% 27% 47% 53% / 67% 12% 88% 33%  ;
-    filter:blur(15px);
+    filter:blur(5px);
     animation-name: bblur;
-    animation-duration: 60s;
+    animation-duration: 45s;
     animation-iteration-count: infinite;
 }
 .img{
@@ -84,6 +84,7 @@ body{
     height: 100%;
 }
 .squares td{
+    border: 1px solid greenyellow;
 }
 .scale{
     transition: 600ms ease-out;
