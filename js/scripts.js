@@ -6,7 +6,8 @@ window.onload = function(){
   var eixoY;
   var eixoXB;
   var eixoYB;
-  console.log(col.length);
+
+  var count;
     for (let i=0;i<cell.length;i++){
       document.querySelectorAll('td')[i].addEventListener("mouseover", function() {
         if(this.cellIndex == (col.length-1)/2){
@@ -21,7 +22,6 @@ window.onload = function(){
     }
     for (let i=0;i<col.length;i++){
       document.querySelectorAll('tr')[i].addEventListener("mouseover", function() {
-
         if(this.sectionRowIndex == (col.length-1)/2){
           eixoX = 0;
         }else if(this.sectionRowIndex > (col.length-1)/2){
@@ -54,7 +54,6 @@ window.onload = function(){
     }
     for (let i=0;i<col.length;i++){
       document.querySelectorAll('tr')[i].addEventListener("mouseover", function() {
-
         if(this.sectionRowIndex == (col.length-1)/2){
           eixoXB = 0;
         }else if(this.sectionRowIndex > (col.length-1)/2){
@@ -75,9 +74,22 @@ window.onload = function(){
     });
   }
         document.querySelector('#tab').addEventListener("mouseover", function() {
-        document.querySelector("#blur").style.cssText = "filter:blur(25px); border-radius :73% 27% 47% 53% / 67% 12% 88% 33% ";
+        document.querySelector("#blur").style.cssText = "filter:blur(40px); border-radius :73% 27% 47% 53% / 67% 12% 88% 33%; transform: scale(1.3);"; 
       });
         document.querySelector('#tab').addEventListener("mouseout", function() {
-          document.querySelector("#blur").style.cssText = "filter:blur(5px); border-radius :73% 27% 47% 53% / 67% 12% 88% 33% ";
+          document.querySelector("#blur").style.cssText = "filter:blur(7px); border-radius :73% 27% 47% 53% / 67% 12% 88% 33% ";
   });
+
+
+var xmouse;
+var ymouse;
+
+
+  window.addEventListener('mousemove', function (e) {
+    document.getElementById('x-value').textContent = xmouse;
+    document.getElementById('y-value').textContent = ymouse;
+    xmouse = e.x;
+    ymouse = e.y;
+    document.getElementById('fol').style.cssText =' left: '+(xmouse-25)+'px; top: '+(ymouse-25)+'px';
+});
 }
